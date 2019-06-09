@@ -1,0 +1,50 @@
+﻿<Window x:Class="biblia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:biblia"
+        mc:Ignorable="d"
+        Title="Biblia" Height="900" Width="1600">
+    <Grid>
+        <Grid x:Name="GridLoginOptions">
+            <Label x:Name="LabelWelcome" HorizontalContentAlignment="Center" Content="Witaj w mojej pierwszej bibliotece :з" Margin="200,151,0,0" FontFamily="Microsoft JhengHei UI" FontSize="48" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1160"/>
+            <Label x:Name="LabelUsername" Content="login" HorizontalAlignment="Left" Margin="619,369,0,0" VerticalAlignment="Top" Height="40" Width="71" FontSize="24" FontFamily="Microsoft JhengHei UI"/>
+            <Label x:Name="LabelPassword" Content="password" HorizontalAlignment="Left" Margin="569,421,0,0" VerticalAlignment="Top" Height="38" Width="122" FontSize="24" FontFamily="Microsoft JhengHei UI"/>
+            <TextBox x:Name="TBUsername" HorizontalAlignment="Left" Height="40" Margin="703,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" FontFamily="Microsoft JhengHei UI" FontSize="24"/>
+            <TextBox x:Name="TBPassword" Height="38" Width="303" Margin="703,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left"/>
+            <Button x:Name="ButtonLogin" Click="ButtonLogin_Click" Content="GO" Margin="744,479,0,0" VerticalAlignment="Top" Height="40" FontFamily="Microsoft JhengHei UI" FontSize="20" HorizontalAlignment="Left" Width="131"/>
+        </Grid>
+        <Grid x:Name="GridOptionsUser" Visibility="Hidden">
+            <Label x:Name="LabelLoggedIn" HorizontalContentAlignment="Center" Margin="200,20,232,0" FontFamily="Microsoft JhengHei UI" FontSize="48" Height="75" VerticalAlignment="Top"/>
+            <Button x:Name="ButtonDisplay" Click="ButtonDisplay_Click" Content="Display" Margin="62,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+            <Button x:Name="ButtonSearch" Click="ButtonSearch_Click" Content="Search" Margin="312,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+            <Button x:Name="ButtonRent" Click="ButtonRent_Click" Content="Rent" Margin="564,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+            <Button x:Name="ButtonReturn" Click="ButtonReturn_Click" Content="Return" Margin="814,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+            <Button x:Name="ButtonLogout" Click="ButtonLogout_Click" Content="Logut" Margin="1484,10,0,0" VerticalAlignment="Top" Height="32" FontFamily="Microsoft JhengHei UI" FontSize="18" HorizontalAlignment="Left" Width="98"/>
+        </Grid>
+        <Grid x:Name="GridOptionsAdmin" Visibility="Hidden">
+            <Button x:Name="ButtonAdd" Click="ButtonAdd_Click" Content="Add" Margin="1064,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+            <Button x:Name="ButtonDelete" Click="ButtonDelete_Click" Content="Delete" Margin="1316,114,0,0" VerticalAlignment="Top" Height="62" FontFamily="Microsoft JhengHei UI" FontSize="24" HorizontalAlignment="Left" Width="202"/>
+        </Grid>
+        <Grid x:Name="GridInputID" Visibility="Hidden">
+            <Label x:Name="LabelBookID" HorizontalContentAlignment="Center" Content="ID" Margin="61,184,1446,0" FontFamily="Microsoft JhengHei UI" FontSize="20" Height="44" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBBookID" HorizontalAlignment="Left" Height="36" Margin="151,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+            <Button x:Name="ButtonInputID" Click="ButtonInputID_Click" Content="GO" Margin="298,184,0,0" VerticalAlignment="Top" Height="36" FontFamily="Microsoft JhengHei UI" FontSize="20" HorizontalAlignment="Left" Width="68"/>
+        </Grid>
+        <Grid x:Name="GridInputBook" Visibility="Hidden">
+            <Label x:Name="LabelBookTitle" HorizontalContentAlignment="Center" Content="Title" Margin="49,184,1010,0" FontFamily="Microsoft JhengHei UI" FontSize="20" Height="44" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBBookTitle" HorizontalAlignment="Left" Height="36" Margin="49,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+            <Label x:Name="LabelBookAuthor" HorizontalContentAlignment="Center" Content="Author" Margin="587,184,596,0" FontFamily="Microsoft JhengHei UI" FontSize="20" Height="44" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBBookAuthor" HorizontalAlignment="Left" Height="36" Margin="587,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="409" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+            <Label x:Name="LabelBookYear" HorizontalContentAlignment="Center" Content="Year" Margin="1001,184,397,0" FontFamily="Microsoft JhengHei UI" FontSize="20" Height="44" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBBookYear" HorizontalAlignment="Left" Height="36" Margin="1001,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+            <Label x:Name="LabelBookPublisher" HorizontalContentAlignment="Center" Content="Publisher" Margin="1201,184,173,0" FontFamily="Microsoft JhengHei UI" FontSize="20" Height="44" VerticalAlignment="Top"/>
+            <TextBox x:Name="TBBookPublisher" HorizontalAlignment="Left" Height="36" Margin="1201,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+            <Button x:Name="ButtonInputBook" Click="ButtonInputBook_Click" Content="GO" Margin="1446,228,56,0" VerticalAlignment="Top" Height="36" FontFamily="Microsoft JhengHei UI" FontSize="20"/>
+        </Grid>
+        <Grid>
+            <DataGrid x:Name="DataGrid" AutoGenerateColumns="True" HorizontalAlignment="Center" Height="Auto" Margin="49,269,0,0" VerticalAlignment="Top" Width="Auto" FontSize="20" Visibility="Hidden"></DataGrid>
+        </Grid>
+    </Grid>
+</Window>
